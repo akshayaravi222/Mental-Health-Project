@@ -163,6 +163,52 @@
       #next{
         margin-top: 30px;
       }
+
+    .dropdownbutton {
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdownbutton:hover, .dropbtn:focus {
+      background-color: #2980B9;
+    }
+
+    .mood_dropdown .feelings_dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: relative;
+      background-color: #f1f1f1;
+      min-width: 16px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #ddd}
+
+    .show {display:block;}
+
+    .resolution {
+      display: none;
+      padding: 10px 20px;
+      border: 2px solid black;
+      border-top: none;
+      background-color: #00CC00;
+    }
       /*footer{
       margin-top: 100px;
       height: 30px;
@@ -193,17 +239,84 @@
       <li><a href="anxiety-quiz.html">TAKE THE QUIZ</a></li>
     </ul>
   </div>
-<div id="centerbody">
-  <h1>Mental Health Tracker</h1>
-  <div class="quiz-container">
-
-  <div id="quiz"></div>
+  <div id="centerbody">
+    <h1>Mental Health Tracker</h1>
+    <div class="mood_dropdown">
+      <button onclick="showMoodDrop()" class="dropdownbutton">How do you feel about yourself?</button>
+      <div id="mood" class="dropdown-content">
+        <a onclick="showResults('rested')">Rested</a>
+        <a onclick="showResults('stressed')">Stressed</a>
+        <a onclick="showResults('lonely')">Lonely</a>
+        <a onclick="showResults('content')">Content</a>
+        <a onclick="showResults('suicidal')">Suicidal</a>
+        <a onclick="showResults('energetic')">Energetic</a>
+        <a onclick="showResults('inspired')">Inspired</a>
+        <a onclick="showResults('tranquil')">Tranquil</a>
+        <a onclick="showResults('worried')">Worried</a>
+        <a onclick="showResults('hurt')">Hurt</a>
+        <a onclick="showResults('insane')">Insane</a>
+        <a onclick="showResults('fatigued')">Fatigued</a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="feelings_dropdown">
+      <button onclick="showFeelingsDrop()" class="dropdownbutton">How do you feel towards others?</button>
+      <div id="getAlong" class="dropdown-content">
+        <a href="#">Grateful</a>
+        <a href="#">Close</a>
+        <a href="#">Distant</a>
+        <a href="#">Envious</a>
+        <a href="#">Resentful</a>
+        <a href="#">Reclusive</a>
+        <a href="#">Proud</a>
+        <a href="#">Loving</a>
+        <a href="#">Peaceful</a>
+        <a href="#">Worried</a>
+        <a href="#">Hearty</a>
+        <a href="#">Welcome</a>
+        <a href="#">Annoyed</a>
+      </div>
+    </div>
+    <br>
+    <div class="resolution" id="rested">
+      rested - Sounds like you have a good night's sleep. Now that you're well rested, have some good food and do what you need to do to take on the day.
+    </div>
+    <div class="resolution" id="stressed">
+      stressed - I'm sorry you feel that way. It can be hard when you have a lot of work to do or a lot of pressure on your shoulders. Take a break, rest, and do something you enjoy, because your mental health is more important than any other work. If necessary, talk with a professional or loved one as well.
+    </div>
+    <div class="resolution" id="lonely">
+      lonely - Especially during this pandemic, times can be tough and you can feel very isolated. Talk over a voice or face chat or text someone you know. If that is not possible, do something you enjoy and call a national helpline, which can be found in our resources section.
+    </div>
+    <div class="resolution" id="content">
+      content - Great! To keep feeling content, do things you enjoy and make sure you sleep and eat well.
+    </div>
+    <div class="resolution" id="suicidal">
+      suicidal - I'm sorry you feel that way. First, take 10 deep breaths and clear your mind for a minute by doing something you enjoy or by going outside. Then, talk to a loved one, a healthcare professional, or call a national helpline, all of whom can assist you.
+    </div>
+    <div class="resolution" id="energetic">
+      energetic - Great! Now, use that energy productively to exercise, complete work, or do something else you love.
+    </div>
+    <div class="resolution" id="inspired">
+      inspired - Wow! That's a great feeling. Put that inspiration to use and do something creative, something you love, or talk to someone else about this inspiration.
+    </div>
+    <div class="resolution" id="tranquil">
+      tranquil - Great! Feeling peaceful is always a great feeling. Using that peace, do something relaxing or complete some work that you would like to do.
+    </div>
+    <div class="resolution" id="worried">
+      worried - I'm sorry you feel that way,that must be tough. If you feel worried, try going outside, meditating, or doing something you love to clear your mind. Then, talk to a loved one or professional if you still feel that way. Most importantly, take a break from thinking about the thing that makes you worried.
+    </div>
+    <div class="resolution" id="hurt">
+      hurt - Oh, being hurt is never a good feeling. I'm sorry that you feel like that. Take a break and do something you love, meditate, or go outside, and most importantly, talk to a loved one or professional about your feelings.
+    </div>
+    <div class="resolution" id="insane">
+      insane - I'm sorry you feel that way. Just take a few minutes and meditate, go outside, or do something relaxing. Then, once you have calmed down a bit, talk to a loved one or professional about your feelings.
+    </div>
+    <div class="resolution" id="fatigued">
+      fatigued - Oh, I'm sorry you feel that way. If you are fatigued, try taking a nap, eating a good meal, or doing something relaxing. Often times it is better to take a break and complete something at a later time when you are not fatigued.
+    </div>
   </div>
-  <button id="previous">Previous</button>
-  <button id="next">Next</button>
-  <button id="submit">Submit Quiz</button>
-  <div id="results"></div>
-</div>
   <script src="tracker.js"></script>
 </body>
 </html>
