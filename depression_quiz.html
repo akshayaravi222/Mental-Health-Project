@@ -130,6 +130,8 @@
         z-index: 1;
         opacity: 0;
         transition: opacity 0.5s;
+        font-size: 30px;
+        font-weight: 20px;
       }
       .active-slide{
         opacity: 1;
@@ -143,6 +145,8 @@
       .answers {
         text-align: left;
         display: inline-block;
+        font-size: 20px;
+        margin-top: 20px;
       }
       .answers label{
         display: block;
@@ -152,6 +156,12 @@
       #results{
         margin-top: 50px;
         margin-bottom: 20px;
+      }
+      #previous{
+        margin-top: 20px;
+      }
+      #next{
+        margin-top: 30px;
       }
       /*footer{
       margin-top: 100px;
@@ -178,13 +188,15 @@
   <div id="nav">
     <a href = "index.html"> <h1>Mental Health Quiz</h1> </a>
     <ul>
-      <li id="about"><a href="#">ABOUT</a></li>
-      <li id="thispage"><a href="#">TAKE THE QUIZ</a></li>
+      <li id="about"><a href="about.html">ABOUT</a></li>
+      <li id="thispage"><a href="depression-quiz.html">TAKE THE DEPRESSION QUIZ</a></li>
+      <li><a href="anxiety-quiz.html">TAKE THE ANXIETY QUIZ</a></li>
     </ul>
   </div>
 <div id="centerbody">
   <h1>Quiz on Depression</h1>
   <div class="quiz-container">
+
   <div id="quiz"></div>
   </div>
   <button id="previous">Previous</button>
