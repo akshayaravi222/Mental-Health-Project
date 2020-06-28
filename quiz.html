@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap" rel="stylesheet">
+	<title>Mental Health Quiz</title>
+	<style>
+		body{
+			font-family: 'Comfortaa', cursive;			
+			background-color: rgb(21, 50, 101);
+		}
+		h1{
+			font-size: 50px;
+		}
+		h3{
+			font-size: 30px;
+		}
+		#nav{
+			height: 75px;
+			background-color: #153265;/*#A9A9A9;/*rgb(255, 255, 240); /*rgb(236, 235, 228);/*rgb(255, 255, 240);*/
+			padding-top: 20px;
+			position: fixed;
+			padding-left: 20px;
+			z-index: 10;
+			width: 100%;
+		}
+		/*#nav img{
+			float:left;
+			height: 50px;
+		}*/
+		#nav h1{
+			font-family: 'Open Sans', sans-serif;
+			float: left;
+			color: #FFFFF0; /*rgb(21, 50, 101); /*rgb(120, 133, 133); /*rgb(236, 235, 228);*/
+		}
+		#nav li{
+			margin-top: 25px;
+			float: right;
+			margin-right: 30px;
+			border-left: solid #FFFFF0 2px;
+			padding-left: 30px;
+		}
+		#nav li a{
+			color: #FFFFF0;;
+			text-decoration: none;
+		}
+		#nav li a:hover{
+			color: #FFFFF0;;
+		}
+		#nav ul{
+			list-style: none;
+			color: rgb(0, 94, 160);
+			display: block;
+		}
+		#about{
+			padding-right: 50px;
+		}
+
+
+
+		#hero{
+			position: relative;
+			width: 100%;
+			height: 850px;
+			margin-bottom: 0px;
+			background-color: #153265; /*rgb(236, 235, 228);/* rgb(255, 255, 240); /*rgb(120, 133, 133);*/
+		}
+		#hero img{
+			width: 100%;
+			height: 600px;
+			margin-bottom: 0;
+		}
+		#text-box{
+			background-color: rgb(0,0,0); /* Fallback color */
+			background-color: rgb(21, 50, 101); /*rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
+			color: rgb(236, 235, 228);
+			font-weight: bold;
+			border: 3px solid #f1f1f1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 2;
+			width: 80%;
+			height: 50%;
+			padding: 20px;
+			text-align: center;
+		}
+		#text-box h1{
+			font-size: 150px;
+			margin-top: 75px;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+
+		.scroll{
+		    position: absolute;
+		    top: 86%;
+		    left: 50%;
+		    transform: translate(-50%,-50%);
+		    z-index: 5;
+		}
+		.scroll span{
+		    display: block;
+		    width: 30px;
+		    height: 30px;
+		    border-bottom: 5px solid #FFFFF0;/*#005ea0; /*#06A8FF;*/
+		    border-right: 5px solid #FFFFF0;/*#005ea0; /*#06A8FF;*/
+		    transform: rotate(45deg);
+		    margin: -10px;
+		    animation: animate 2s infinite;
+		}
+		.scroll span:nth-child(2){
+		    animation-delay: -0.2s;
+		}
+		.scroll span:nth-child(3){
+		    animation-delay: -0.4s;
+		}
+		@keyframes animate {
+		    0%{
+		        opacity: 0;
+		        transform: rotate(45deg) translate(-20px,-20px);
+		    }
+		    50%{
+		        opacity: 1;
+		    }
+		    100%{
+		        opacity: 0;
+		        transform: rotate(45deg) translate(20px,20px);
+		    }
+		}
+
+		#featured h1{
+			text-align: center;
+			color: #FFFFF0;
+		}
+
+		#featured p{
+			text-align: center;
+			margin-top: 8px;
+			color: #FFFFF0;
+			/*color: rgb(0, 94, 160);*/
+		}
+
+		#top-boxes{
+			padding-bottom: 20px;
+			margin-left: 175px;
+		}
+
+		#blank{
+			height: 0px;
+			width: 100%;
+			clear: both;
+		}
+
+		.container {
+		  position: relative;
+		  width: 25%;
+		  float: left;
+		  margin-top: 30px;
+		  margin-right: 50px;
+		  margin-bottom: 50px;
+		  background-color: #FFFFF0;
+		  height: 300px;
+		}
+
+		.image {
+			padding-top: 30px;
+		  display: block;
+		  width: 100%;
+		  height: auto;
+		  max-height: 450px;
+		  text-align: center;
+		  /*padding-top: 10px;*/
+		  line-height: 25px;
+		}
+
+		.image h1{
+			margin-bottom: 20px;
+		}
+
+		.image a{
+			text-decoration: none;
+			color: rgb(21, 50, 101);
+		}
+
+		.overlay {
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  height: 100%;
+		  width: 100%;
+		  opacity: 0;
+		  transition: .5s ease;
+		  background-color: #FFFFF0;
+		}
+
+		.container:hover .overlay {
+		  opacity: 0.8;
+		}
+
+		.text {
+		  color: rgb(21, 50, 101);
+		  /*font-size: 20px;*/
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  -webkit-transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%);
+		  text-align: center;
+		}
+
+
+		footer{
+			margin-top: 100px;
+			height: 30px;
+			width: 100%;
+			background-color: rgb(21, 50, 101);
+			padding-top: 10px;
+			padding-bottom: 5px;
+			bottom: 0;
+			margin-bottom: 0;
+			clear: both;
+			color: rgb(255, 255, 240);
+		}
+		footer p{
+			text-align: center;
+			color: rgb(255, 255, 240);
+		}
+		footer a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<!--<a href="index.html"> <img src="images/AR.png"> </a>-->
+		<a href = "index.html"> <h1>Mental Health Quiz</h1> </a>
+		<ul>
+			<li id="about"><a href="about.html">ABOUT</a></li>
+			<li><a href="resources.html">RESOURCES</a></li>
+			<li><a href="quiz.html">TAKE THE QUIZ</a></li>
+		</ul>
+	</div>
+
+	<div id="hero">
+		<div id="text-box">
+			<h1>Quizzes</h1>
+			<h3>Choose from one of our three custom quizzes.</h3>
+		</div>
+
+		<div class="scroll">
+                <span></span>
+                <span></span>
+                <span></span>
+  
+		</div>
+	</div>
+
+	<div id="featured">
+
+		<h1> Options </h1>
+		<h1> _________________ </h1>
+		<p> Take a quiz for anxiety, depression, or lonliness during this pandemic. </p>
+	</div>
+
+	<div id="top-boxes">
+		<div class="container">
+		  <div class = "image">
+		  	<h1> Anxiety </h1>
+		  	<p> Feeling restless or irritable? Not able to concenttrate or always tired? take this quiz to find out if you could have anxiety. </p>
+		  	<a href="anxiety_quiz.html"><p> Click here to take this quiz. </p> </a>
+		  </div>
+		  <!--<div class="overlay">
+		    <div class="text">
+		    	<a href="anxiety_quiz.html"><p> Click here to take this quiz. </p> </a>  
+			</div>
+		  </div>-->
+		</div>
+
+		<div class="container">
+		  <div class = "image">
+		  	<h1> Depression </h1>
+		  	<p> Feeling sad a lot? Feeling very hungry or not hungry at all? Not being able to sleepor sleeping too much? Take this quiz to find out if you are suffering from depression. </p>
+		  	<a href="depression_quiz.html"><p> Click here to take this quiz. </p> </a>
+		  </div>
+		  <!--<div class="overlay">
+		    <div class="text">
+		    	<a href="anxiety_quiz.html"><p> Click here to take this quiz. </p> </a>  
+			</div>
+		  </div>-->
+		</div>
+
+		<div class="container">
+		  <div class = "image">
+		  	<h1> Lonliness </h1>
+		  	<p> Feeling lonely during these tough times? Take this quiz to find out if you are experiencing that. </p>
+		  	<a href="loneliness_quiz.html"><p> Click here to take this quiz. </p> </a>
+		  </div>
+		  <!--<div class="overlay">
+		    <div class="text">
+		    	<a href="anxiety_quiz.html"><p> Click here to take this quiz. </p> </a>  
+			</div>
+		  </div>-->
+		</div>
+	</div>
+
+	<footer>
+		<a href = "index.html"> <p>Back to top</p> </a>
+	</footer>
+
+
+
+	<script>
+		//importPackage("Packages.Users⁩.student⁩.Desktop⁩.mentalhealth⁩");
+
+
+		/*window.alert == null;
+		alert(validatePassword("akshaya", "ravi"));
+		delete window.alert; // true
+		alert(validatePassword("akshaya", "ravi")); // win*/
+		//document.getElementById("demo").innerHTML = validatePassword("akshaya", "ravi");
+		/*var slideIndex = 0;
+		carousel();
+
+		function carousel() {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";
+		  }
+		  slideIndex++;
+		  if (slideIndex > x.length) {slideIndex = 1}
+		  x[slideIndex-1].style.display = "block";
+		  setTimeout(carousel, 3000); // Change image every 2 seconds
+		}*/
+
+		/*object.addEventListener("click", myScript);
+		object.onclick = function(){myScript};
+		document.getElementById("button").onClick = function vp(){
+			alert("hello");
+			validatePassword("akshaya", "ravi");
+		}*/
+
+
+		/*$(function() {
+		  $('a[href*=#]').on('click', function(e) {
+		    e.preventDefault();
+		    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+		  });
+		});*/
+
+		/*(window.alert(5 + 6);
+
+
+		//document.getElementById("demo").innerHTML = 5 + 6;
+
+		var username = "akshaya"
+		var password = "ravi"*/
+
+		/*function validatePassword(username, password){
+			window.alert("hi!");
+			var myClass = Java.type("Users⁩.student⁩.eclipse-workspace⁩.mhproj.src.Accounts")
+			//var vp = myClass.validatePassword(username, password);
+			window.alert("h");
+			//var acc = new Users⁩.student⁩.eclipse-workspace⁩.Misc..src.Accounts();
+			//var acc = new Packages.com.student.eclipse-workspace.src.Accounts();
+			//var acc = Users⁩.student⁩.eclipse-workspace⁩.mhproj.src.Accounts();
+			//var acc = Packages.Accounts();
+			//var acc = ‎⁨Packages.Users⁩.student⁩.Desktop⁩.mentalhealth⁩.Accounts();
+
+			//var acc = ‎⁨Packages.Users⁩.student⁩.Desktop⁩.mentalhealth⁩.Accounts().validatePassword(username, password);
+			window.alert("hello ");
+			//var tf = acc.validatePassword(username, password);
+			//window.alert("hello " + tf);
+
+			/*if(tf == true){
+				window.alert("Login successful");
+			} 
+			else{
+				window.alert("Login failed");
+			}*/
+			//return{
+				//5+6;
+				//result: tf;
+				//result: acc.validatePassword (username, password);
+			//}
+    		//return{
+    		//result: acc.validatePassword (username, password);
+    		//alert(result);
+    		//result = "hi";
+    		//}
+    		//return 5+6;
+    		//return 5 + 6
+		//}
+	</script>
+</body>
+</html>
