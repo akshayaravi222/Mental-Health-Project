@@ -151,7 +151,7 @@ function results() {
   if(worryCount > 21) {
     resultsContainer.innerHTML = `You may have depression. Please consider scheduling an appointment with a professional.`;
   } else {
-    resultsContainer.innerHTML = `You don't have depression. If you feel that you truly do have depression, please consider scheduling an appointment with a professional.`;
+    resultsContainer.innerHTML = `You likely don't have depression. If you feel that you truly do have depression, please consider scheduling an appointment with a professional.`;
   }
 }
 

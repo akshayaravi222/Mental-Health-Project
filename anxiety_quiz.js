@@ -157,7 +157,7 @@ function results() {
   if(worryCount > 24) {
     resultsContainer.innerHTML = `You may have anxiety. Please consider scheduling an appointment with a professional.`;
   } else {
-    resultsContainer.innerHTML = `You don't have anxiety. If you feel that you truly do have anxiety, please consider scheduling an appointment with a professional.`;
+    resultsContainer.innerHTML = `You likely don't have anxiety. If you feel that you truly do have anxiety, please consider scheduling an appointment with a professional.`;
   }
 }
 
