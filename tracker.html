@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        color: #FFFFF0;
+        font-family: Comfortaa;
+        background-color: rgb(21, 50, 101);
+        text-align: center;
+      }
+      #previous {
+      background-color: #005EA0; /* Light Blue */
+      border: none;
+      color: white;
+        color: #FFFFF0;
+        font-family: "Comfortaa", cursive;
+        background-color: rgb(21, 50, 101);
+        text-align: center;
+      }
+      #nav{
+        font-family: Comfortaa;
+      height: 75px;
+      background-color: #153265;/*#A9A9A9;/*rgb(255, 255, 240); /*rgb(236, 235, 228);/*rgb(255, 255, 240);*/
+      padding-top: 20px;
+      position: fixed;
+      padding-left: 20px;
+      z-index: 10;
+      width: 100%;
+    }
+    /*#nav img{
+      float:left;
+      height: 50px;
+    }*/
+    #nav h1{
+      float: left;
+      color: #FFFFF0; /*rgb(21, 50, 101); /*rgb(120, 133, 133); /*rgb(236, 235, 228);*/
+    }
+    #nav li{
+      margin-top: 25px;
+      float: right;
+      margin-right: 30px;
+      border-left: solid #FFFFF0 2px;
+      padding-left: 30px;
+    }
+    #nav li a{
+      color: #FFFFF0;;
+      text-decoration: none;
+    }
+    #nav li a:hover{
+      color: #FFFFF0;;
+    }
+    #nav ul{
+      list-style: none;
+      color: rgb(0, 94, 160);
+      display: block;
+    }
+    #about{
+      padding-right: 50px;
+    }
+
+
+      #previous {
+      background-color: #005EA0; /* Light Blue */
+      color: #FFFFF0;
+      border: solid #FFFFF0 1px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: Comfortaa;
+      }
+      #next {
+      background-color: #153265; /* Blue */
+      border: none;
+      border: solid #FFFFF0 1px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: Comfortaa;
+      margin-bottom: 50px;
+      }
+      #submit {
+      background-color: #4A6A51; /* Green */
+      border: none;
+      border: solid #FFFFF0 1px;
+
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: Comfortaa;
+      }
+      #centerbody{
+        height: 200px;
+        width: 500px;
+        padding: 13% 5%;
+        background-color: #266097;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        width: 75%;
+        padding: 13% 5%;
+        background-color: rgb(21, 50, 101);
+        margin-top: 100px;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      #centerbody h1{
+        font-size: 100px;
+      }
+      .slide{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.5s;
+        font-size: 30px;
+        font-weight: 20px;
+      }
+      .active-slide{
+        opacity: 1;
+        z-index: 2;
+      }
+      .quiz-container{
+        position: relative;
+        height: 200px;
+        margin-top: 40px;
+      }
+      .answers {
+        text-align: left;
+        display: inline-block;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      .answers label{
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      #results{
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+      #previous{
+        margin-top: 20px;
+      }
+      #next{
+        margin-top: 30px;
+      }
+      /*footer{
+      margin-top: 100px;
+      height: 30px;
+      width: 100%;
+      background-color: rgb(21, 50, 101);
+      padding-top: 10px;
+      padding-bottom: 5px;
+      bottom: 0;
+      margin-bottom: 0;
+      clear: both;
+      color: rgb(255, 255, 240);
+    }
+    footer p{
+      text-align: center;
+      color: rgb(255, 255, 240);
+    }
+    footer a{
+      text-decoration: none;
+    }*/
+  </style>
+</head>
+<body>
+  <div id="nav">
+    <a href = "index.html"> <h1>Mental Health Quiz</h1> </a>
+    <ul>
+      <li id="about"><a href="about.html">ABOUT</a></li>
+      <li id="thispage"><a href="depression-quiz.html">TAKE THE DEPRESSION QUIZ</a></li>
+      <li><a href="anxiety-quiz.html">TAKE THE ANXIETY QUIZ</a></li>
+    </ul>
+  </div>
+<div id="centerbody">
+  <h1>Mental Health Tracker</h1>
+  <div class="quiz-container">
+
+  <div id="quiz"></div>
+  </div>
+  <button id="previous">Previous</button>
+  <button id="next">Next</button>
+  <button id="submit">Submit Quiz</button>
+  <div id="results"></div>
+</div>
+  <script src="tracker.js"></script>
+</body>
+</html>
