@@ -135,12 +135,14 @@
 		#featured h1{
 			text-align: center;
 			color: #FFFFF0;
+			text-decoration: none;
 		}
 
 		#featured p{
 			text-align: center;
 			margin-top: 8px;
 			color: #FFFFF0;
+			text-decoration: none;
 			/*color: rgb(0, 94, 160);*/
 		}
 
@@ -170,6 +172,8 @@
 		  height: auto;
 		  max-height: 450px;
 		}
+		
+
 
 		.overlay {
 		  position: absolute;
@@ -182,6 +186,14 @@
 		  opacity: 0;
 		  transition: .5s ease;
 		  background-color: #FFFFF0;
+		}
+		
+		.overlay h1{
+			text-decoration: none;
+		}
+		
+		.overlay p{
+			text-decoration: none;
 		}
 
 		.container:hover .overlay {
@@ -198,6 +210,18 @@
 		  -ms-transform: translate(-50%, -50%);
 		  transform: translate(-50%, -50%);
 		  text-align: center;
+		}
+
+
+		.text a{
+			text-decoration: none;
+			text-decoration: underline;
+			color: rgb(21, 50, 101);
+		}
+
+		.text p{
+			text-decoration: none;
+			
 		}
 
 
@@ -236,7 +260,7 @@
 	<div id="hero">
 		<div id="text-box">
 			<h1>Welcome</h1>
-			<h3>Do you not feel like yourself lately? Take <a href="quiz.html" style="color: red;">our quiz</a> and use our tracker to learn more about what's going on.</h3>
+			<h3>Do you not feel like yourself lately? Take <a href="quiz.html" style="color: red; text-decoration: none;">our quiz</a> and use our tracker to learn more about what's going on.</h3>
 		</div>
 
 		<div class="scroll">
@@ -259,8 +283,9 @@
 		  <img src="images/stress.jpg" alt="Avatar" class="image">
 		  <div class="overlay">
 		    <div class="text">
-		    	<h1> About </h1>
-			</div>
+			    <a href="about.html"> <h1> About </h1> </a>
+			    <a href="about.html"> <p> Learn about why we have these quizzes. </p> </a> 
+		  </div>
 		  </div>
 		</div>
 
@@ -268,7 +293,8 @@
 		  <img src="images/heart.jpg" alt="Avatar" class="image">
 		  <div class="overlay">
 		    <div class="text">
-		    	<h1> Contact </h1>
+			    <a href="quiz.html"> <h1> Our Quizzes </h1> </a>
+			    <a href="quz.html"> <p> Take one of our quizzes. </p> </a> 
 			</div>
 		  </div>
 		</div>
