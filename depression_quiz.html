@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        color: #FFFFF0;
+        font-family: "Comfortaa", cursive;
+        background-color: rgb(21, 50, 101);
+        text-align: center;
+      }
+      #nav{
+        font-family: Comfortaa;
+      height: 75px;
+      background-color: #153265;/*#A9A9A9;/*rgb(255, 255, 240); /*rgb(236, 235, 228);/*rgb(255, 255, 240);*/
+      padding-top: 20px;
+      position: fixed;
+      padding-left: 20px;
+      z-index: 10;
+      width: 100%;
+    }
+    /*#nav img{
+      float:left;
+      height: 50px;
+    }*/
+    #nav h1{
+      float: left;
+      color: #FFFFF0; /*rgb(21, 50, 101); /*rgb(120, 133, 133); /*rgb(236, 235, 228);*/
+    }
+    #nav li{
+      margin-top: 25px;
+      float: right;
+      margin-right: 30px;
+      border-left: solid #FFFFF0 2px;
+      padding-left: 30px;
+    }
+    #nav li a{
+      color: #FFFFF0;;
+      text-decoration: none;
+    }
+    #nav li a:hover{
+      color: #FFFFF0;;
+    }
+    #nav ul{
+      list-style: none;
+      color: rgb(0, 94, 160);
+      display: block;
+    }
+#about{
+      padding-right: 50px;
+    }
+
+
+      #previous {
+      background-color: #005EA0; /* Light Blue */
+      color: #FFFFF0;
+      border: solid #FFFFF0 1px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: Comfortaa;
+      }
+      #next {
+      background-color: #153265; /* Blue */
+      border: solid #FFFFF0 1px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: Comfortaa;
+      }
+      #submit {
+      background-color: #4A6A51; /* Green */
+      border: solid #FFFFF0 1px;
+
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: Comfortaa;
+      }
+      #centerbody{
+        height: 200px;
+        width: 75%;
+        padding: 13% 5%;
+        background-color: rgb(21, 50, 101);
+        margin-top: 100px;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      #centerbody h1{
+        font-size: 100px;
+      }
+    </style>
+</head>
+<body>
+  <div id="nav">
+    <a href = "index.html"> <h1>Mental Health Quiz</h1> </a>
+    <ul>
+      <li id="about"><a href="#">ABOUT</a></li>
+      <li id="thispage"><a href="#">TAKE THE QUIZ</a></li>
+    </ul>
+  </div>
+<div id="centerbody">
+  <h1>Quiz on Depression</h1>
+  Quiz goes here
+  <br><br>
+  <div class="quiz-container">
+  <div id="quiz"></div>
+  </div>
+  <button id="previous">Previous</button>
+  <button id="next">Next</button>
+  <button id="submit">Submit Quiz</button>
+  <div id="results"></div>
+</div>
+  <script src="anxiety_quiz.js">
+
+</body>
+</html>
